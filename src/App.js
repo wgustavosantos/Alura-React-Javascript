@@ -42,7 +42,6 @@ function App() {
 
   const [colaboradores, setColaboradoress] = useState([]);
 
-
   const listaColaboradores = (colaborador) => {
     setColaboradoress([...colaboradores, colaborador]);
 
@@ -52,7 +51,7 @@ function App() {
   return (
     <div className="App">
       <Banner />
-      <Formulario aoColaboradorCadastrado={colab => listaColaboradores(colab)} />
+      <Formulario times={times.map( (time) => time.nome)} aoColaboradorCadastrado={colab => listaColaboradores(colab)} />
       {times.map(
         (time, index) => {
           return <Time key={index} nome={time.nome} corPrimaria={time.corPrimaria} corSecundaria={time.corSecundaria}/>
