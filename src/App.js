@@ -49,12 +49,18 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <div className="App">j
       <Banner />
       <Formulario times={times.map( (time) => time.nome)} aoColaboradorCadastrado={colab => listaColaboradores(colab)} />
       {times.map(
         (time, index) => {
-          return <Time key={index} nome={time.nome} corPrimaria={time.corPrimaria} corSecundaria={time.corSecundaria}/>
+          return <Time
+           key={index} 
+           nome={time.nome} 
+           corPrimaria={time.corPrimaria} 
+           corSecundaria={time.corSecundaria}
+           colaboradores={colaboradores.filter( (c) => c.time === time.nome)}
+           />
         }
       )}
     </div>
