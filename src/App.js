@@ -7,6 +7,7 @@ import Time from './componentes/Time/index.js';
 function App() {
 
   const times = [
+ 
     {
       nome: 'Front-End',
       corPrimaria: '#82CFFA',
@@ -36,6 +37,11 @@ function App() {
       nome: 'Inovação e Gestão',
       corPrimaria: '#FF8A29',
       corSecundaria: '#FFEEDF',
+    },
+    {
+      nome: 'Back-End',
+      corPrimaria: '##57C278',
+      corSecundaria: '#D9F7E9',
     }
 
   ]

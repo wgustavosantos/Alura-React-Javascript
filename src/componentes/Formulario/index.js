@@ -15,8 +15,13 @@ const Formulario = (props) => {
     
 
     const aoSalvar = (evento) => {
+        console.log({nome, cargo, imagem, time})
         evento.preventDefault()
         props.aoColaboradorCadastrado({nome, cargo, imagem, time})
+        setNome('')
+        setCargo('')
+        setImagem('')
+        setTime('')
     }
 
     return (
