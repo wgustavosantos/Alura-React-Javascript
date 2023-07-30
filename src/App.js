@@ -40,7 +40,7 @@ function App() {
     },
     {
       nome: 'Back-End',
-      corPrimaria: '##57C278',
+      corPrimaria: '#57C278',
       corSecundaria: '#D9F7E9',
     }
 
@@ -55,7 +55,7 @@ function App() {
   }
 
   return (
-    <div className="App">j
+    <div className="App">
       <Banner />
       <Formulario times={times.map( (time) => time.nome)} aoColaboradorCadastrado={colab => listaColaboradores(colab)} />
       {times.map(

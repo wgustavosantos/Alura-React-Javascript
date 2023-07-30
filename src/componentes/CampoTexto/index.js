@@ -1,7 +1,8 @@
 import './CampoTexto.css';
+import './CampoImagem.css';
 
 
-const   CampoTexto = (props) => {
+export const CampoTexto = (props) => {
 
     return (
         <div className="campo-texto">
@@ -12,4 +13,18 @@ const   CampoTexto = (props) => {
 
 }
 
-export default CampoTexto
+export const CampoImagem = (props) => {
+
+    return (
+        <div className='campo-imagem'>
+          <label htmlFor="imagem">Imagem</label>
+          <input
+            type="file"
+            id="imagem"
+            accept="image/*"
+            onChange={evento => props.aoAlterado(evento.target.files[0])}
+          />
+        </div>
+    )
+}
+

@@ -8,6 +8,7 @@
 }
 .colaborador img {
     width: 100px;
+    height: 100px;
     border-radius: 50%;
     position: relative;
     bottom: -50px;
@@ -17,8 +18,9 @@
     background: #FFFFFF;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.08);
     border-radius: 0px 0px 10px 10px;
-    padding-top: 90px;
-    padding-bottom: 40px;
+    padding-top: 40px;
+    padding-bottom: 1px;
+    height: 280px;
 }
 
 .colaborador .rodape h4 {
@@ -34,4 +36,8 @@
     line-height: 22px;
     color: #212121;
     padding: 0 16px;
+}
+
+.rodape h5 {
+    margin-top: 60px;
 }

@@ -1,8 +1,10 @@
 import './Formulario.css'
-import CampoTexto from '../CampoTexto/';
+import {CampoTexto, CampoImagem} from '../CampoTexto'
 import ListaSuspensa from '../ListaSuspensa/ListaSuspensa';
 import Botao from '../Botao';
-import { useState } from 'react';
+import React, { useState } from 'react';
+import ReactCrop from 'react-image-crop';
+import 'react-image-crop/dist/ReactCrop.css';
 
 const Formulario = (props) => {
 
@@ -42,13 +44,18 @@ const Formulario = (props) => {
                 valor={cargo}
                 aoAlterado={valor => setCargo(valor)}
                  />
-                <CampoTexto 
+                
+                {/* <CampoTexto 
                 label='Imagem' 
                 placeholder='Informe o endereço da imagem' 
                 valor={imagem}
                 aoAlterado={valor => setImagem(valor)}
-                 />
+                 /> */}
+                <CampoImagem 
+                aoAlterado={valor => setImagem(valor)}
+                />
                 <ListaSuspensa 
+                label={'Time'}
                 obrigatorio={true} 
                 itens={props.times} 
                 valor={time}
